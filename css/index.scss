@@ -1,0 +1,248 @@
+*{
+    padding:0;
+    margin:0;
+    list-style: none;
+    box-sizing: border-box;
+}
+$w:320px,360px,375px,412px,414px,768px;
+html{
+    font-size:100px;
+}
+body{
+    font-size:15px;
+    background: #fff;
+    position: relative;
+}
+$design-size:750px;
+@each $n in $w {
+    @media screen and (min-width:#{$n}){
+        html{
+            font-size:100px * $n / $design-size ;
+        }
+    }
+    
+}
+.header{
+    width:100%;
+    height:1rem;
+    background: #309af2;
+    color:#fff;
+    font-size: 18px;
+    line-height: 1rem;
+    box-shadow: 0 0 4px #ccc;
+    position: relative;
+    .logo{
+        width:75%;
+        height:1rem;
+        float:left;
+        img{
+            width:2.8rem;
+            height:100%;
+        }
+    }
+    .sear{
+        width:1rem;
+        height:1rem;
+        position: absolute;
+        right:0.3rem;
+        top:0;
+        border-left: 1px solid #666;
+        img{
+           width:1.2rem;
+            height:100%; 
+        }
+    };
+    .create{
+        width:1rem;
+        height:1rem;
+        position: absolute;
+        right:1.3rem;
+        top:0;
+        border-left: 1px solid #666;
+        img{
+           width:1.2rem;
+            height:100%; 
+        }
+    }
+}
+.ul{
+    width:100%;
+    height:auto;
+    position: relative;
+    li{
+        width:50%;
+        height:3rem;
+        margin-top:0.6rem;
+        float:left;
+        padding-left:1.1rem;
+        position: relative;
+        p{
+           width:60%;
+           text-align: center;
+            img{
+                width:2rem;
+                height:2rem;
+            };
+            a{
+                font-size: 16px;
+                line-height: 0.8rem;
+                color:#000;
+                text-decoration: none;
+            }
+        };
+    };
+}
+.footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:1rem;
+    box-shadow: 0 -1px 4px #ccc;
+    .update{
+        width:73%;
+        height:100%;
+        background: #e4e4e4;
+        float:left;
+        color:#999;
+        text-align: center;
+        line-height: 1rem;
+    };
+    .set{
+        width:1rem;
+        height:100%;
+        float:left;
+        background-color: #ccc;
+        border-right:1px solid #e4e4e4;
+        img{
+            width:0.6rem;
+            height:0.6rem;
+            margin:0.2rem;
+        }
+    };
+    .shift{
+        width:1rem;
+        height:100%;
+        float:left;
+        background-color: #ccc;
+        border-left:1px solid #e4e4e4;
+        img{
+           width:0.6rem;
+            height:0.6rem;
+            margin:0.2rem;
+        }
+    }
+}
+
+.zhtop{
+    width:100%;
+    height:1rem;
+    background: deepskyblue;
+    color:#fff;
+    font-size: 18px;
+    line-height: 1rem;
+    box-shadow: 0 0 4px #ccc;
+    position: relative;
+    .names{
+        width:60%;
+        height:1rem;
+        text-indent: 1em;
+        color:#888;
+    };
+    .com{
+        position: absolute;
+        right:0.3rem;
+        top:0;
+        font-size: 14px;
+        width:1rem;
+        height:100%;
+        text-align: right;
+    }
+}
+.zhCon{
+    width:100%;
+    height:auto;
+    input{
+        width:100%;
+        height:auto;
+        border:none;
+        outline: none;
+        color:#888;
+        font-size: 18px;
+        letter-spacing: 2px;
+        text-indent: 1em;
+        line-height: 40px;
+    }
+}
+.zhbottom{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:1rem;
+    background: deepskyblue;
+    li{
+        width:auto;
+        height:100%;
+        float:left;
+        color:#fff;
+        text-align: center;
+        line-height: 1rem;
+        padding-left:0.4rem;
+        padding-right:0.3rem;
+     
+    };
+}
+
+.mynav{
+    width:100%;
+    height:1rem;
+    background: #262626;
+    li{
+        width:auto;
+        height:100%;
+        float:left;
+        line-height: 1rem;
+        a{
+            color:#fff;
+            height:20px;
+            text-align: center;
+            padding-left:0.6rem;
+            padding-right:0.6rem;
+            text-decoration: none;
+        };
+        span{
+            height:20px;
+            width:1px;
+            color:#4C4C4B;
+        }
+    };
+    .xuan{
+        border-bottom:6px solid deepskyblue;
+    }    
+}
+.mycon{
+    width:100%;
+    height:auto;
+    li{
+        width:100%;
+        height:1.5rem;
+        margin-top:0.4rem;
+        float:left;
+        padding-left:0.3rem;
+        img{
+            width:1.2rem;
+            height:1.2rem;
+            float: left;
+        };
+        a{
+            float: left;
+            height:100%;
+            font-size: 16px;
+            line-height: 0.4rem;
+            color:#000;
+            padding-left: 0.1rem;
+            text-decoration: none;
+        }
+    };
+}
