@@ -10,7 +10,7 @@ html{
 }
 body{
     font-size:15px;
-    background: #efefee;
+    background: #fff;
     position: relative;
 }
 $design-size:750px;
@@ -131,7 +131,7 @@ $design-size:750px;
     .update{
         width:73%;
         height:100%;
-        background: #fff;
+        background: #fafafa;
         float:left;
         color:#7f7f7f;
         font-size: 16px;
@@ -164,7 +164,17 @@ $design-size:750px;
         }
     }
 }
-
+.zhuan{
+    animation: zhuan 1.8s both;
+}
+@keyframes zhuan {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 .zhtop{
     width:100%;
     height:1rem;
@@ -238,7 +248,7 @@ $design-size:750px;
             color:#fff;
             height:20px;
             text-align: center;
-            padding-left:0.6rem;
+            padding-left:0.7rem;
             padding-right:0.6rem;
             text-decoration: none;
         };
@@ -255,6 +265,7 @@ $design-size:750px;
 .mycon{
     width:100%;
     height:auto;
+    overflow: hidden;
     li{
         width:100%;
         height:1.5rem;
@@ -269,14 +280,33 @@ $design-size:750px;
         a{
             float: left;
             height:100%;
-            font-size: 16px;
-            line-height: 0.4rem;
+            font-size: 18px;
+            line-height: 1rem;
             color:#000;
+            letter-spacing: 2px;
             padding-left: 0.1rem;
             text-decoration: none;
+            overflow: hidden;
         }
     };
+    .done{
+        a{
+            color:#ccc;
+            text-decoration: line-through;
+        }
+    }
+     .ani-delete{
+        animation: delete 0.8s ease both;
+    }
 }
+@keyframes delete{
+        0%{
+            transform: translate3d(0,0,0) scale(1);
+        }
+        100%{
+            transform: translate3d(150%,100%,0) scale(0);
+        }
+    }
 
 
 .gg{
