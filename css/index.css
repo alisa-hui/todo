@@ -193,14 +193,18 @@ body {
 
 .zhCon {
   width: 100%;
-  height: auto; }
-  .zhCon input {
+  height: auto;
+  overflow: hidden; }
+  .zhCon textarea {
     width: 100%;
-    height: auto;
+    height: 100%;
     border: none;
     outline: none;
     color: #888;
+    overflow: hidden;
     font-size: 18px;
+    word-break:break-all;
+    word-wrap: break-word;
     letter-spacing: 2px;
     text-indent: 1em;
     line-height: 40px; }
@@ -236,12 +240,11 @@ body {
       height: 20px;
       text-align: center;
       padding-left: 0.7rem;
-      padding-right: 0.6rem;
+      padding-right: 0.7rem;
       text-decoration: none; }
-    .mynav li span {
-      height: 20px;
-      width: 1px;
-      color: #4C4C4B; }
+    .mynav .comm a{
+      border-left: 1px solid #4C4C4B;
+      border-right: 1px solid #4C4C4B;}
   .mynav .xuan {
     border-bottom: 6px solid deepskyblue; }
 
@@ -262,8 +265,9 @@ body {
     .mycon li a {
       float: left;
       height: 100%;
+      width:70%;
       font-size: 18px;
-      line-height: 1rem;
+      line-height: 1.2rem;
       color: #000;
       letter-spacing: 2px;
       padding-left: 0.1rem;

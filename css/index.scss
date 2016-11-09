@@ -203,12 +203,14 @@ $design-size:750px;
 .zhCon{
     width:100%;
     height:auto;
-    input{
+    overflow: hidden;
+    textarea{
         width:100%;
-        height:auto;
+        height:100%;
         border:none;
         outline: none;
         color:#888;
+        overflow: hidden;
         font-size: 18px;
         letter-spacing: 2px;
         text-indent: 1em;
@@ -249,7 +251,7 @@ $design-size:750px;
             height:20px;
             text-align: center;
             padding-left:0.7rem;
-            padding-right:0.6rem;
+            padding-right:0.7rem;
             text-decoration: none;
         };
         span{
@@ -258,6 +260,12 @@ $design-size:750px;
             color:#4C4C4B;
         }
     };
+    .comm{ 
+        a{
+             border-left: 1px solid #4C4C4B;
+             border-right: 1px solid #4C4C4B;
+        }
+     };
     .xuan{
         border-bottom:6px solid deepskyblue;
     }    
@@ -280,6 +288,7 @@ $design-size:750px;
         a{
             float: left;
             height:100%;
+            width:70%;
             font-size: 18px;
             line-height: 1rem;
             color:#000;

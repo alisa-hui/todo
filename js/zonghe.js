@@ -5,7 +5,7 @@ $(document).ready(function(){
 	create.on("touchstart",function(){
 		location.href="zonghe.html";
 	})
-	var input=$(".zhCon input");
+	var input=$(".zhCon textarea");
 	var v=input.val;
 	var todo={
 		name:input.val(),
@@ -54,16 +54,15 @@ $(document).ready(function(){
 	})
 	//nav触摸
 	var lis=$(".mynav li");
-	var mycon=$(".mycon")
-	lis.on("touchstart",function(){
+	var mycon=$(".mycon");
+	lis.on("touchend",function(){
 		lis.removeClass("xuan");
 		$(this).addClass("xuan");
-		console.log(this)
-		mycon.children("li").show();
+		mycon.find("li").show();
 		if($(this).attr("data-role")==="com"){
-			mycon.children("li:not(.done)").hide();
+			mycon.find("li:not(.done)").hide();
 		}else if($(this).attr("data-role")==="re"){
-			mycon.children("li.done").hide();
+			mycon.find("li.done").hide();
 		}
 	})
 	function render(){
@@ -77,5 +76,16 @@ $(document).ready(function(){
 	var logo=$(".logo img");
 	logo.on("touchstart",function(){
 		location.href="index.html";
+	})
+	//涂鸦下
+	var textarea=$(".tycon textarea");
+	console.log(textarea.length)
+	$(".tybottom li").on("touchend",function(){
+		var qq=$(this).index;
+		if(qq==0){
+			textarea.css("color","#00BFFF")
+		}else if(qq==4){
+			textarea.html("");
+		}
 	})
 })
